@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.title=@"已下载";
     _dataArray = [[NSMutableArray alloc]init];
     _CachedTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     _CachedTableView.delegate = self;
