@@ -111,35 +111,13 @@
                     <view key="view" contentMode="scaleToFill" id="pBR-TY-gYJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Lk-45w">
-                                <rect key="frame" x="117" y="212" width="86" height="87"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="35G-PJ-NvZ"/>
-                                    <constraint firstAttribute="height" constant="87" id="7Hd-35-mye"/>
-                                </constraints>
-                                <state key="normal" title="Play Local">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playLocalButton:" destination="RK1-iV-Oej" eventType="touchUpInside" id="1ev-kB-bOj"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="8Ie-Lk-45w" secondAttribute="centerX" id="0XZ-6I-j2G"/>
-                            <constraint firstAttribute="centerY" secondItem="8Ie-Lk-45w" secondAttribute="centerY" constant="28.5" id="oJn-3W-Hdn"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9KQ-sQ-tbW"/>
-                    <connections>
-                        <outlet property="playLocalButton" destination="8Ie-Lk-45w" id="TMl-6r-oKG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7Q-Lr-yD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="1048"/>
+            <point key="canvasLocation" x="1301" y="979"/>
         </scene>
         <!--Cached-->
         <scene sceneID="ALw-2C-d9z">

@@ -8,26 +8,66 @@
 
 #import "CachedViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
-@interface CachedViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *playLocalButton;
+@interface CachedViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (strong, nonatomic) UITableView *CachedTableView;
 
 @end
 
 @implementation CachedViewController
-- (IBAction)playLocalButton:(UIButton *)sender {
-    MPMoviePlayerViewController* VodPlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://127.0.0.1:12347/Downloads/69_11846/69_11846.m3u8"]];
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    _dataArray = [[NSMutableArray alloc]init];
+    _CachedTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _CachedTableView.delegate = self;
+    _CachedTableView.dataSource=self;
+    [self.view addSubview:_CachedTableView];
+
+    NSString *path=[NSString stringWithFormat:@"%@/Documents/Downloads/finished.plist",NSHomeDirectory()];
+    NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
+    _dataArray=[NSMutableArray arrayWithArray:tempArray];
+    NSLog(@"temp%@",tempArray);
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark UITableView
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _dataArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"ID"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    cell.textLabel.text = [_dataArray[indexPath.row] objectForKey:@"fileTitle"];
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *fileName=[_dataArray[indexPath.row] objectForKey:@"fileName"];
+    NSString *strUrl=[NSString stringWithFormat:@"http://127.0.0.1:12347/Downloads/%@/%@.m3u8",fileName,fileName];
+    MPMoviePlayerViewController* VodPlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:strUrl]];
     if (VodPlayer)
     {
-//        if ([VodPlayer respondsToSelector:@selector(setMovieSourceType:)])
-//        {
-            VodPlayer.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
-//        }
+        //        if ([VodPlayer respondsToSelector:@selector(setMovieSourceType:)])
+        //        {
+        VodPlayer.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+        //        }
         [self presentViewController:VodPlayer animated:YES completion:nil];
         [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(myMovieFinishedCallback:) name: MPMoviePlayerPlaybackDidFinishNotification object: nil];
     }
+
+
 }
+
 - (void)myMovieFinishedCallback:(NSNotification *)notification{
-    
     
     NSNumber *reason = [[notification userInfo] objectForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey];
     switch ([reason integerValue])
@@ -36,10 +76,10 @@
         {
             NSLog(@"视频结束了");
             
-//            double progress =  self.currentPlayer.currentPlaybackTime;
-//            double duration = self.currentPlayer.duration;
+            //            double progress =  self.currentPlayer.currentPlaybackTime;
+            //            double duration = self.currentPlayer.duration;
             
-//            NSLog(@"视频结束了,%f=====%f",progress,duration);
+            //            NSLog(@"视频结束了,%f=====%f",progress,duration);
         }
             break;
         case MPMovieFinishReasonPlaybackError:
@@ -58,28 +98,5 @@
     
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _playLocalButton.layer.borderColor = [UIColor grayColor].CGColor;
-    _playLocalButton.layer.borderWidth = 1;
-    _playLocalButton.layer.cornerRadius= _playLocalButton.frame.size.width/2;
-    _playLocalButton.layer.masksToBounds=YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
