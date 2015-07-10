@@ -10,6 +10,8 @@
 
 @implementation CachedTableViewCell
 
+
+
 - (void)awakeFromNib {
     // Initialization code
 }

@@ -14,6 +14,5 @@ typedef void(^TableViewCellConfigureBolck)(id cell,id item);
 @interface ArrayDataSourse : NSObject<UITableViewDataSource>
 
 -(id)initWithItem:(NSArray*)anItem cellIdentifer:(NSString*)aCellIdentifier configCellBlock:(TableViewCellConfigureBolck)aConfigCellBlock;
-
 -(id)itemAtIndexPath:(NSIndexPath*)indexPath;
 @end

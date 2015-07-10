@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CachedTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
+@property (weak, nonatomic) IBOutlet UILabel *middleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
 
 @end

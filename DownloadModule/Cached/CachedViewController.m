@@ -7,6 +7,8 @@
 //
 
 #import "CachedViewController.h"
+#import "CachedModel.h"
+#import "CachedTableViewCell.h"
 #import <MediaPlayer/MediaPlayer.h>
 @interface CachedViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) UITableView *CachedTableView;
@@ -42,12 +44,30 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"ID"];
+    CachedTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"ID"];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"CachedTableViewCell" owner:self options:nil]lastObject];
+
     }
-    cell.textLabel.text = [_dataArray[indexPath.row] objectForKey:@"fileTitle"];
+    cell.middleLabel.text = [_dataArray[indexPath.row] objectForKey:@"fileTitle"];
+    cell.middleLabel.font = [UIFont systemFontOfSize:13];
+    cell.leftButton.layer.borderColor =[UIColor grayColor].CGColor;
+    cell.leftButton.layer.borderWidth = 1;
+    cell.leftButton.layer.masksToBounds =YES;
+    cell.leftButton.layer.cornerRadius = cell.leftButton.frame.size.width/2;
+    
+    
+    cell.rightButton.layer.borderColor =[UIColor grayColor].CGColor;
+    cell.rightButton.layer.borderWidth = 1;
+    cell.rightButton.layer.masksToBounds =YES;
+    cell.rightButton.layer.cornerRadius = cell.leftButton.frame.size.width/2;
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

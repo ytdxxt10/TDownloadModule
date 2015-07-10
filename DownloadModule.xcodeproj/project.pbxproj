@@ -36,6 +36,9 @@
 		6B92F2601B3C053B0052887F /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B92F25F1B3C053B0052887F /* FileModel.m */; };
 		6B92F2621B3C055D0052887F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B92F2611B3C055D0052887F /* libz.dylib */; };
 		6B965BD71B4D287800F3BCCB /* CachedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B965BD61B4D287800F3BCCB /* CachedViewController.m */; };
+		6BB3E0061B4F836E00650422 /* CachedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3E0041B4F836E00650422 /* CachedTableViewCell.m */; };
+		6BB3E0071B4F836E00650422 /* CachedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB3E0051B4F836E00650422 /* CachedTableViewCell.xib */; };
+		6BB3E00A1B4FBAB300650422 /* CachedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3E0091B4FBAB300650422 /* CachedModel.m */; };
 		C77524B27FA7466A712944E8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F4691F413D42D3306170FF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +71,8 @@
 		6B6D1D5C1B326CDA00F1B257 /* DownloadModuleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadModuleTests.m; sourceTree = "<group>"; };
 		6B6D1D661B326E5800F1B257 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadViewController.h; path = DownloadModule/DownloadViewController.h; sourceTree = SOURCE_ROOT; };
 		6B6D1D671B326E5800F1B257 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadViewController.m; path = DownloadModule/DownloadViewController.m; sourceTree = SOURCE_ROOT; };
-		6B6D1D6A1B32707800F1B257 /* ArrayDataSourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSourse.h; sourceTree = "<group>"; };
-		6B6D1D6B1B32707800F1B257 /* ArrayDataSourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSourse.m; sourceTree = "<group>"; };
+		6B6D1D6A1B32707800F1B257 /* ArrayDataSourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayDataSourse.h; path = ../ArrayDataSourse.h; sourceTree = "<group>"; };
+		6B6D1D6B1B32707800F1B257 /* ArrayDataSourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrayDataSourse.m; path = ../ArrayDataSourse.m; sourceTree = "<group>"; };
 		6B6D1D6D1B32711400F1B257 /* DownloadModule.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadModule.pch; sourceTree = "<group>"; };
 		6B6D1D6E1B32945000F1B257 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListModel.h; path = ../ListModel.h; sourceTree = "<group>"; };
 		6B6D1D6F1B32945000F1B257 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListModel.m; path = ../ListModel.m; sourceTree = "<group>"; };
@@ -111,6 +114,11 @@
 		6B92F2611B3C055D0052887F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6B965BD51B4D287800F3BCCB /* CachedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedViewController.h; sourceTree = "<group>"; };
 		6B965BD61B4D287800F3BCCB /* CachedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedViewController.m; sourceTree = "<group>"; };
+		6BB3E0031B4F836E00650422 /* CachedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedTableViewCell.h; sourceTree = "<group>"; };
+		6BB3E0041B4F836E00650422 /* CachedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedTableViewCell.m; sourceTree = "<group>"; };
+		6BB3E0051B4F836E00650422 /* CachedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CachedTableViewCell.xib; sourceTree = "<group>"; };
+		6BB3E0081B4FBAB300650422 /* CachedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedModel.h; sourceTree = "<group>"; };
+		6BB3E0091B4FBAB300650422 /* CachedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedModel.m; sourceTree = "<group>"; };
 		B8055F65D90969CD6DB74466 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CCBCBDB53BE1ED03F18F62CE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,8 +176,6 @@
 				6B965BD21B4CD0C800F3BCCB /* Download */,
 				6B92F2061B3BFFAB0052887F /* m3u8 */,
 				6B6E75431B39636900FF0FE1 /* netWork */,
-				6B6D1D6A1B32707800F1B257 /* ArrayDataSourse.h */,
-				6B6D1D6B1B32707800F1B257 /* ArrayDataSourse.m */,
 				6B6D1D471B326CDA00F1B257 /* ViewController.h */,
 				6B6D1D481B326CDA00F1B257 /* ViewController.m */,
 				6B6D1D4A1B326CDA00F1B257 /* Main.storyboard */,
@@ -273,8 +279,15 @@
 		6B965BD41B4D285400F3BCCB /* Cached */ = {
 			isa = PBXGroup;
 			children = (
+				6B6D1D6A1B32707800F1B257 /* ArrayDataSourse.h */,
+				6B6D1D6B1B32707800F1B257 /* ArrayDataSourse.m */,
+				6BB3E0081B4FBAB300650422 /* CachedModel.h */,
+				6BB3E0091B4FBAB300650422 /* CachedModel.m */,
 				6B965BD51B4D287800F3BCCB /* CachedViewController.h */,
 				6B965BD61B4D287800F3BCCB /* CachedViewController.m */,
+				6BB3E0031B4F836E00650422 /* CachedTableViewCell.h */,
+				6BB3E0041B4F836E00650422 /* CachedTableViewCell.m */,
+				6BB3E0051B4F836E00650422 /* CachedTableViewCell.xib */,
 			);
 			path = Cached;
 			sourceTree = "<group>";
@@ -383,6 +396,7 @@
 				6B6D1D4C1B326CDA00F1B257 /* Main.storyboard in Resources */,
 				6B8F89311B3418AD00295BED /* DownloadModuleLocaleString.strings in Resources */,
 				6B6D1D751B32946D00F1B257 /* ListTableViewCell.xib in Resources */,
+				6BB3E0071B4F836E00650422 /* CachedTableViewCell.xib in Resources */,
 				6B6D1D511B326CDA00F1B257 /* LaunchScreen.xib in Resources */,
 				6B6D1D4E1B326CDA00F1B257 /* Images.xcassets in Resources */,
 			);
@@ -455,6 +469,8 @@
 				6B6E754D1B39636900FF0FE1 /* HttpDownLoadBlock.m in Sources */,
 				6B92F2121B3BFFAB0052887F /* M3U8Handler.mm in Sources */,
 				6B92F2161B3BFFAB0052887F /* VideoDownloader.mm in Sources */,
+				6BB3E0061B4F836E00650422 /* CachedTableViewCell.m in Sources */,
+				6BB3E00A1B4FBAB300650422 /* CachedModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

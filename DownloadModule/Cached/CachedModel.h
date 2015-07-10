@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CachedModel : NSObject
-
+@property (strong,nonatomic) NSString *fileName;
+@property (strong,nonatomic) NSString *fileTitle;
 @end
