@@ -24,6 +24,7 @@
 		6B6E754D1B39636900FF0FE1 /* HttpDownLoadBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E75471B39636900FF0FE1 /* HttpDownLoadBlock.m */; };
 		6B6E754E1B39636900FF0FE1 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E75491B39636900FF0FE1 /* MyMD5.m */; };
 		6B6E754F1B39636900FF0FE1 /* NSFileManager+method.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E754B1B39636900FF0FE1 /* NSFileManager+method.m */; };
+		6B8085461B534AE3002C9DF1 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8085451B534AE3002C9DF1 /* DatabaseManager.m */; };
 		6B8F89311B3418AD00295BED /* DownloadModuleLocaleString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B8F89331B3418AD00295BED /* DownloadModuleLocaleString.strings */; };
 		6B92F2121B3BFFAB0052887F /* M3U8Handler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B92F2091B3BFFAB0052887F /* M3U8Handler.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B92F2131B3BFFAB0052887F /* M3U8Playlist.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B92F20B1B3BFFAB0052887F /* M3U8Playlist.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -87,6 +88,8 @@
 		6B6E75491B39636900FF0FE1 /* MyMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMD5.m; sourceTree = "<group>"; };
 		6B6E754A1B39636900FF0FE1 /* NSFileManager+method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+method.h"; sourceTree = "<group>"; };
 		6B6E754B1B39636900FF0FE1 /* NSFileManager+method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+method.m"; sourceTree = "<group>"; };
+		6B8085441B534AE3002C9DF1 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		6B8085451B534AE3002C9DF1 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		6B8F892D1B34188100295BED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6B8F892E1B34188100295BED /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		6B8F892F1B34189700295BED /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				6B92F25C1B3C05180052887F /* CommonHelper.m */,
 				6B6D1D761B3298CB00F1B257 /* NSString+Encrytion.h */,
 				6B6D1D771B3298CB00F1B257 /* NSString+Encrytion.m */,
+				6B8085441B534AE3002C9DF1 /* DatabaseManager.h */,
+				6B8085451B534AE3002C9DF1 /* DatabaseManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 			files = (
 				6B92F2601B3C053B0052887F /* FileModel.m in Sources */,
 				6B965BD71B4D287800F3BCCB /* CachedViewController.m in Sources */,
+				6B8085461B534AE3002C9DF1 /* DatabaseManager.m in Sources */,
 				6B48D1781B3A3ED500612D98 /* DownloadManage.m in Sources */,
 				6B6E754F1B39636900FF0FE1 /* NSFileManager+method.m in Sources */,
 				6B6E754E1B39636900FF0FE1 /* MyMD5.m in Sources */,

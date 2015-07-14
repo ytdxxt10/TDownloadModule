@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DownloadViewController.h"
 #import "HTTPServer.h"
+#import "DatabaseManager.h"
 @interface AppDelegate ()
 {
     HTTPServer *httpServer;
@@ -25,6 +26,7 @@
 //    [self.window makeKeyAndVisible];
     
 //[smaTabVc.btStateMonitorTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:25]];
+    [[DatabaseManager shareDataManager]createDatabase];
     NSLog(@"date%@",[NSDate dateWithTimeIntervalSinceNow:25]);
 //    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(downloadClick:) name:@"Download" object:nil];
     
@@ -32,6 +34,7 @@
      httpServer = [[HTTPServer alloc]init];
     [httpServer setType:@"_http._tcp."];
     NSString *webPath=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] ;
+    NSLog(@"%@",webPath);
     [httpServer setPort:12347];
     [httpServer setDocumentRoot:webPath];
     NSError *error;

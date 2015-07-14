@@ -10,6 +10,7 @@
 #import "AFURLSessionManager.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "CommonHelper.h"
+#import "DatabaseManager.h"
 @implementation VideoDownloader
 @synthesize totalprogress,playlist,delegate;
 
@@ -314,7 +315,9 @@
         _count++;
     }
     NSLog(@"a segment Download Finished");
-    
+   NSInteger count = [[DatabaseManager shareDataManager]selectFileName:fileName count:0];
+    count =count +1;
+    [[DatabaseManager shareDataManager]updateDataFileName:fileName count:count];
     NSLog(@"fileName:%@ _count:%d",fileName,_count);
 //    NSLog(@"downloadArray%@",downloadArray);
 //    _count++;

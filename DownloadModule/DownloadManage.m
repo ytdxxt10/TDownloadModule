@@ -11,6 +11,7 @@
 #import "VideoDownloader.h"
 #import "FileModel.h"
 #import "AFNetworking.h"
+#import "DatabaseManager.h"
 @implementation DownloadManage
 
 -(id)init{
@@ -68,6 +69,7 @@
     
 //           [self downloadFileWithUrl:_fileInfo.fileURL fileName:_fileInfo.fileName];
            [self startDownloadUrl:_fileInfo.fileURL fileName:_fileInfo.fileName fileTitle:_fileInfo.fileTitle];
+        [[DatabaseManager shareDataManager]insertFileName:_fileInfo.fileName count:0];
     }
 
 
