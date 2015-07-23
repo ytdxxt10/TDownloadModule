@@ -49,14 +49,18 @@
 -(void)updateDataFileName:(NSString *)fileName count:(NSInteger)count
 {
    
-    NSString *moidify = [NSString stringWithFormat:@"update info set count=%ld",(long)count];
+    NSString *moidify = [NSString stringWithFormat:@"update info set count=%ld where fileName='%@'",(long)count,fileName];
     [_database executeUpdate:moidify];
     
 }
 -(NSInteger)selectFileName:(NSString *)fileName count:(NSInteger)theCount
 {
     FMResultSet *set = [_database executeQuery:@"select *from info where fileName=?",fileName];
-    NSString *count = [set stringForColumn:@"count"];
-    return [count integerValue];
+    NSString *str=nil;
+    while ([set next]) {
+        str = [set stringForColumn:@"count"];
+    }
+    NSLog(@"testsss%@",str);
+    return [str integerValue];
 }
 @end
